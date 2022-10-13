@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap");
 :root {
   /* Increase or decrease the number 
   to change the vertical spacing globally*/
@@ -14,6 +14,8 @@
   --vspace-2: calc(1.5 * var(--space) * 1rem);
   --vspace-3: calc(0.5 * var(--space) * 1rem);
   --kanit: "Kanit", sans-serif;
+  --space-grotesk: "Space Grotesk", sans-serif;
+  --dosis: "Dosis", sans-serif;
 }
 * {
   box-sizing: border-box;
@@ -156,7 +158,7 @@ img {
 }
 //////////////////////////
 body {
-  font-family: var(--kanit);
+  font-family: var(--dosis);
   background-color: black;
   color: white;
   border-collapse: collapse;
@@ -212,30 +214,39 @@ main {
     color: transparent;
     -webkit-text-stroke: 2px white;
   }
-  .getbold1 {
-    position: absolute;
-    left: 0;
-    display: inline-block;
-    font-weight: 700;
-    background-color: white;
-    -webkit-background-clip: text;
-    color: transparent;
-    animation: makeitappear 2s linear infinite;
+  .getbold {
+    // font-weight: 700;
+    font-variation-settings: "wght" 300;
+    // background-color: white;
+    // -webkit-background-clip: text;
+    // color: transparent;
+    animation: makeitappear 4s linear infinite;
   }
   @keyframes makeitappear {
     0% {
+      // font-weight: 400;
+      font-variation-settings: "wght" 300;
+
       // font-weight: 100;
-      clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+      // clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
     }
-    50% {
+    10% {
       // font-weight: 700;
+      font-variation-settings: "wght" 700;
 
       // text-shadow: 40px 0px 10px white;
-      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+      // clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+    90% {
+      font-variation-settings: "wght" 700;
     }
     100% {
+      font-variation-settings: "wght" 300;
+
+      // font-weight: 400;
+
       // font-weight: 100;
-      clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+      // clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
     }
   }
 }
