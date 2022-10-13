@@ -1,0 +1,284 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  /* Increase or decrease the number 
+  to change the vertical spacing globally*/
+  /* Base Vertical Spacing */
+  --space: 1.62;
+  /* Vertical Spacing - multiplier */
+  --vspace: calc(var(--space) * 1rem);
+  --vspace-0: calc(3 * var(--space) * 1rem);
+  --vspace-1: calc(2 * var(--space) * 1rem);
+  --vspace-2: calc(1.5 * var(--space) * 1rem);
+  --vspace-3: calc(0.5 * var(--space) * 1rem);
+  --kanit: "Kanit", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-size: 1em;
+  max-width: calc(25 * var(--vspace-1));
+  margin: 0 auto;
+}
+
+p {
+  margin: var(--vspace) 0;
+  line-height: var(--vspace);
+}
+
+h1 {
+  margin: var(--vspace-1) 0 var(--vspace-1) 0;
+  line-height: calc(3.8542 / var(--space) * var(--vspace));
+}
+
+h2 {
+  margin: var(--vspace-2) 0 var(--vspace-3) 0;
+  line-height: 1em;
+}
+
+h3 {
+  margin: var(--vspace-1) 0 var(--vspace-3) 0;
+  line-height: 1em;
+}
+
+h4,
+h5,
+h6 {
+  margin: var(--vspace-2) 0 var(--vspace-3) 0;
+  line-height: var(--vspace);
+}
+
+.bigtitle,
+h1 {
+  font-size: 3.8542em;
+  word-break: break-word;
+}
+
+.title,
+h2 {
+  font-size: 2.8958em;
+  font-weight: lighter;
+  word-break: break-word;
+}
+
+.subheading1,
+h3 {
+  font-size: 1.7917em;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+blockquote {
+  font-size: 1em;
+  font-style: italic;
+  line-height: calc(1 * var(--vspace));
+  margin: var(--vspace-2) var(--vspace-2);
+}
+
+.subheading2,
+h4 {
+  font-size: 1.4792em;
+  text-transform: capitalize;
+}
+
+.subheading3,
+h5 {
+  font-size: 1.1042em;
+  font-weight: lighter;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+.subheading4,
+h6 {
+  font-size: 1em;
+  font-weight: normal;
+  font-style: italic;
+  font-family: "le-monde-livre-classic-byol", serif !important;
+  letter-spacing: 0px !important;
+}
+
+.caption_ts {
+  font-size: 0.8333em;
+  font-weight: normal;
+  font-style: italic;
+}
+
+.endnote_ts {
+  font-size: 0.8333em;
+}
+
+.footnote_ts {
+  margin: var(--vspace-0) 0 var(--vspace-2) 0;
+  font-size: 0.75em;
+  border-top: 1px solid #ccc;
+  line-height: 2em;
+}
+
+sup {
+  font-size: 0.75rem;
+  margin: 0.5em;
+  text-transform: none;
+  font-style: italic;
+}
+
+ul {
+  list-style: square;
+  list-style-position: inside;
+  display: flex;
+  flex-direction: row;
+  gap: var(--vspace-3);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+ul li::marker {
+  opacity: 0;
+  color: transparent;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+body {
+  font-family: var(--kanit);
+  background-color: black;
+  color: white;
+  border-collapse: collapse;
+}
+
+header {
+  margin-top: var(--vspace-3);
+}
+
+.fixed-nav {
+  display: grid;
+  grid-template-columns: 10% minmax(0, 15%) 50% minmax(0, 15%) 10%;
+}
+.fixed-nav > * {
+  border: 1px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.navigation {
+  padding: var(--vspace-3);
+}
+
+main {
+  padding: var(--vspace-0);
+  display: flex;
+}
+
+.column {
+  padding: var(--vspace-3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.column-text {
+  width: 45%;
+}
+.column-text h1 {
+  font-weight: 100;
+  text-transform: uppercase;
+  line-height: 1.1;
+  position: relative;
+}
+.column-text .control {
+  display: inline-block;
+  position: relative;
+  white-space: nowrap;
+}
+.column-text .normal {
+  display: inline-block;
+  font-weight: 700;
+  color: transparent;
+  -webkit-text-stroke: 2px white;
+}
+.column-text .getbold1 {
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  font-weight: 700;
+  background-color: white;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-animation: makeitappear 2s linear infinite;
+          animation: makeitappear 2s linear infinite;
+}
+@-webkit-keyframes makeitappear {
+  0% {
+    -webkit-clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+            clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+  }
+  50% {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  100% {
+    -webkit-clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+            clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+  }
+}
+@keyframes makeitappear {
+  0% {
+    -webkit-clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+            clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+  }
+  50% {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  100% {
+    -webkit-clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+            clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+  }
+}
+
+.column-images {
+  top: 0;
+  width: 55%;
+  position: -webkit-sticky;
+  position: sticky;
+  align-self: flex-start;
+  height: auto;
+}
+
+.position {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+
+.image-control {
+  position: absolute;
+  width: 100%;
+  height: 400px;
+  min-height: 400px;
+}
+.image-control img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.image-control.photo {
+  display: grid;
+  place-items: center;
+}
+.image-control.photo img {
+  width: 80%;
+}/*# sourceMappingURL=index.css.map */
